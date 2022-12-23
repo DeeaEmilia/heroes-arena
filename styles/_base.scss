@@ -1,0 +1,33 @@
+//reset styles
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../assets/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Macando';
+    src: url(../assets/Macondo-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'OpenSans';
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: 0;
+}
+

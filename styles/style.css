@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(../assets/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Macando";
+  src: url(../assets/Macondo-Regular.ttf);
+}
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "OpenSans";
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+}
+
+body {
+  background-image: url(../assets/cloud-wallpaper.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.main-container .title {
+  color: rgb(240, 248, 255);
+  font-size: 90px;
+  font-family: "Macando";
+  text-align: center;
+}
+.main-container .show-heroes-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+}
+
+.heroes-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: #e5e5e5;
+  flex-flow: row wrap;
+}
+
+.hero-container {
+  margin: 20px 10px;
+  padding: 50px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-basis: 20%;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  background-color: #063f71;
+  background-image: url(..//assets/caveman.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: exclusion;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+}
+.hero-container:hover {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca, 0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+  cursor: pointer;
+}
+.hero-container .hero-img {
+  height: 220px;
+  margin: 0 10px 30px 10px;
+  padding: 5px;
+  border-color: #042b4e;
+  border-style: double;
+  background-color: rgba(240, 248, 255, 0.524);
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+}
+.hero-container .hero-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: "Macando";
+}
+.hero-container .hero-details {
+  padding: 20px 0px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.hero-container .hero-details .hero-hp {
+  background-color: rgba(240, 248, 255, 0.832);
+  padding: 8px 10px;
+  border-radius: 15px;
+  color: #007F72;
+  margin: 0px 4px;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+}
+.hero-container .hero-details .hero-attack {
+  background-color: rgba(240, 248, 255, 0.832);
+  padding: 8px 10px;
+  border-radius: 15px;
+  color: #FF4635;
+  margin: 0px 4px;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+}
+.hero-container .hero-details .hero-stats-icon {
+  height: 15px;
+}
+.hero-container .hero-abilities {
+  font-family: "Macando";
+  font-size: 20px;
+}
+.hero-container .hero-class {
+  padding: 10px 10px;
+  font-size: 17px;
+  font-family: "Macando";
+}/*# sourceMappingURL=style.css.map */
