@@ -4,6 +4,7 @@ class Hero {
         this.hp = hp;
         this.canFly = false;
         this.shield = false;
+        this.heal = false;
     }
 
     attacked(damage) {
@@ -19,6 +20,14 @@ class Hero {
             damage *= 0.8;
             console.log(this.name + " shielded.");
         }
+        
+        if (this.heal) {
+            let chance = Math.random();
+            if (chance > 0.7) {
+                console.log(this.name + " healed for 10%.");
+                damage *= 0.9;
+            }
+        }
 
         this.hp -= damage;
 
@@ -30,6 +39,7 @@ class Dwarf extends Hero {
     constructor(name, hp) {
         super(name, hp);
         this.shield = true;
+        this.heal = true;
     }
 
     attack(otherHero) {
