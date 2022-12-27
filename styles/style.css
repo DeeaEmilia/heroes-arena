@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(../assets/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Macando";
+  src: url(../assets/Macondo-Regular.ttf);
+}
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "OpenSans";
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+}
+
+body {
+  background-image: url(../assets/cloud-wallpaper.webp);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.main-container .title {
+  color: rgb(240, 248, 255);
+  font-size: 90px;
+  font-family: "Macando";
+  text-align: center;
+}
+.main-container .show-heroes-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+  display: flex;
+}
+
+.heroes-container {
+  display: none;
+  justify-content: space-evenly;
+  color: rgb(240, 248, 255);
+  flex-flow: row wrap;
+}
+
+.hero-container {
+  margin: 2vh 2vw;
+  padding: 5vh 5vw;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #063f71;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+  transition: 0.5s all ease;
+}
+.hero-container:hover {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca, 0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+  cursor: pointer;
+}
+.hero-container .hero-img {
+  margin: 0 10px 30px 10px;
+  padding: 5px;
+  border-color: #042b4e;
+  border-style: double;
+  background-color: rgba(240, 248, 255, 0.524);
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px rgba(8, 8, 8, 0.319);
+}
+.hero-container .hero-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-container .hero-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: "Macando";
+}
+.hero-container .hero-details {
+  padding: 20px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-container .hero-details span {
+  padding: 8px 2px;
+  margin: 0px 2px;
+}
+.hero-container .hero-details .hero-hp .extra {
+  color: #02d24b;
+}
+.hero-container .hero-details .hero-hp .minus {
+  color: #ff4e4e;
+}
+.hero-container .hero-details .hero-attack .extra {
+  color: #02d24b;
+}
+.hero-container .hero-details .hero-stats-icon {
+  height: 15px;
+}
+.hero-container .hero-abilities {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-container .hero-abilities .abilities-title {
+  margin: 10px 0;
+  font-size: 20px;
+  font-family: "Macando";
+}
+.hero-container .hero-class {
+  padding: 10px 10px;
+  font-size: 17px;
+  font-family: "Macando";
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+}
+.tooltip img {
+  margin: 5px 3px;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: #042b4e;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  opacity: 95%;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext strong {
+  font-size: 16px;
+}
+.tooltip:hover {
+  transform: scale(1.2) translateY(-10px);
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  text-align: left;
+  top: 100%;
+  left: 50%;
+  margin-left: -80px;
+  padding: 10px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #042b4e transparent;
+}/*# sourceMappingURL=style.css.map */
