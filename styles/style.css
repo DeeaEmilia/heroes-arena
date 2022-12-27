@@ -64,7 +64,7 @@ body {
 }
 
 .heroes-container {
-  display: none;
+  display: flex;
   justify-content: space-evenly;
   color: rgb(240, 248, 255);
   flex-flow: row wrap;
