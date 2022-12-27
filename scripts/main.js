@@ -121,3 +121,12 @@ let dragon = new Dragon("Dragonair", 210);
 
 let epicFight = new Fight(dwarf, sprite);
 epicFight.go();
+
+function showHeroes() { 
+    document.getElementById("hero").style.display = "flex";
+ }
+
+
+const start = document.getElementById("start");
+
+start.addEventListener('click', showHeroes);
