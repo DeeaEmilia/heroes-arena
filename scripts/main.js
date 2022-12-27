@@ -124,6 +124,8 @@ epicFight.go();
 
 function showHeroes() { 
     document.getElementById("hero").style.display = "flex";
+    start.style.display = "none";
+    document.getElementById("title").style.fontSize = "25px";
  }
 
 
