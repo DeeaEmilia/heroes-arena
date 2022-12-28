@@ -214,17 +214,18 @@ body {
             left: 50%;
             margin-left: -80px;
             padding: 10px;
+
+            &::after {
+                content: ' ';
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent rgba(121, 0, 111, 0.711) transparent;
+            }
         }
     }
-
-    &::after {
-        content: ' ';
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent rgba(121, 0, 111, 0.711) transparent;
-    }
+ 
 }

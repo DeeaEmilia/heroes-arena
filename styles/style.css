@@ -196,7 +196,7 @@ body {
   margin-left: -80px;
   padding: 10px;
 }
-.tooltip::after {
+.tooltip:hover .tooltiptext::after {
   content: " ";
   position: absolute;
   bottom: 100%;
