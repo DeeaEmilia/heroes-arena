@@ -179,7 +179,6 @@ body {
   padding: 5px 0;
   border-radius: 6px;
   opacity: 95%;
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }
@@ -197,13 +196,10 @@ body {
   margin-left: -80px;
   padding: 10px;
 }
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip .tooltiptext::after {
+.tooltip::after {
   content: " ";
   position: absolute;
   bottom: 100%;
-  /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
