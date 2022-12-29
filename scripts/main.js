@@ -2,6 +2,10 @@ let res="Battlelog: <br><br> ";
 const start = document.getElementById("start");
 const battlelog = document.getElementById("battlelog");
 const modal = document.querySelector('.modal');
+const heros = document.getElementById("heros")
+const title = document.getElementById("title");
+const modalContainer = document.getElementById("modal-container");
+const restart = document.getElementById("restart");
 
 class Hero {
     constructor(name, hp) {
@@ -140,9 +144,10 @@ let epicFight = new Fight(dwarf, sprite);
 epicFight.go();
 
 function showHeroes() { 
-    document.getElementById("hero").style.display = "flex";
-    document.getElementById("title").style.display = "none";
+    heros.style.display = "flex";
+    title.style.display = "none";
     battlelog.style.display = "inherit";
+    restart.style.display = "inherit";
     start.style.display = "none";
  }
 
@@ -156,9 +161,12 @@ function clearModal(e) {
         modal.style.display = 'none';
     }
 }
-
+function restartGame(){
+    location.reload();
+}
 
 start.addEventListener('click', showHeroes);
 battlelog.addEventListener('click', roundResults);
 window.addEventListener('click', clearModal);
+restart.addEventListener('click', restartGame);
 
