@@ -241,6 +241,10 @@ body {
     display: flex;
     justify-content: center;
 
+    #start-fight {
+        display: none;
+    }
+
     #battlelog {
         display: none;
     }

@@ -212,6 +212,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.btn-container #start-fight {
+  display: none;
+}
 .btn-container #battlelog {
   display: none;
 }

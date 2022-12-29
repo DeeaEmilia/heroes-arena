@@ -1,11 +1,12 @@
 let res="Battlelog: <br><br> ";
 const start = document.getElementById("start");
 const battlelog = document.getElementById("battlelog");
-const modal = document.querySelector('.modal');
+const modal = document.querySelector(".modal");
 const heros = document.getElementById("heros")
 const title = document.getElementById("title");
 const modalContainer = document.getElementById("modal-container");
 const restart = document.getElementById("restart");
+const startFightBtn = document.getElementById("start-fight");
 
 class Hero {
     constructor(name, hp) {
@@ -148,6 +149,7 @@ function showHeroes() {
     title.style.display = "none";
     battlelog.style.display = "inherit";
     restart.style.display = "inherit";
+    startFightBtn.style.display = "inherit";
     start.style.display = "none";
  }
 
@@ -165,8 +167,13 @@ function restartGame(){
     location.reload();
 }
 
+function startFight(){
+
+}
+
 start.addEventListener('click', showHeroes);
 battlelog.addEventListener('click', roundResults);
 window.addEventListener('click', clearModal);
 restart.addEventListener('click', restartGame);
+startFightBtn.addEventListener('click', startFight);
 
