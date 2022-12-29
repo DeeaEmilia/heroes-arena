@@ -210,7 +210,7 @@ body {
 
 .btn-container {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 .btn-container #battlelog {
   display: none;
