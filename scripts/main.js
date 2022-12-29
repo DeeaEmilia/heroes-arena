@@ -58,7 +58,7 @@ class Dwarf extends Hero {
     attack(otherHero) {
         let damage = 100;
         console.log(this.name + " attacked with damage: " + damage + ". ");
-        res += "<strong style='color:#59ba44;'>[ " + this.name + "] </strong>triggered <strong style='color:#e48100;'>[I attacc]</strong> and attacked with " + damage + " damage. ";
+        res += "<strong style='color:#59ba44;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[He attacc]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -72,7 +72,7 @@ class Sprite extends Hero {
     attack(otherHero) {
         let damage = 150;
         console.log(this.name + " attacked with damage: " + damage + ". ");
-        res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>triggered <strong style='color:#e48100;'>[Heart of Fire]</strong> and attacked with " + damage + " damage. ";
+        res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -87,7 +87,7 @@ class Dragon extends Hero {
     attack(otherHero) {
         let damage = 50;
         console.log(this.name + " attacked with damage: " + damage + ". ");
-        res += "<strong style='color:#17DCE5;'>[ " + this.name + "] </strong>triggered <strong style='color:#e48100;'>[Snek Attack]</strong> and attacked with " + damage + " damage. ";
+        res += "<strong style='color:#17DCE5;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Snek Attack]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
