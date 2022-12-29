@@ -152,7 +152,7 @@ function showHeroes() {
  }
 
 function roundResults(){
-    document.getElementById("battlelogContainer").innerHTML = res;
+    modalContainer.innerHTML = res;
     modal.style.display = "block";
 }
 
