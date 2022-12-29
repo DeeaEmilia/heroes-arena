@@ -1,7 +1,12 @@
-let res="Battlelog: <br><br> ";
-const start = document.getElementById("start");
-const battlelog = document.getElementById("battlelog");
+let res='Battlelog: <br><br> ';
+const start = document.getElementById('start');
+const battlelog = document.getElementById('battlelog');
+const battlelogContainer = document.getElementById('battlelog-modal');
 const modal = document.querySelector('.modal');
+const text = document.getElementById('choice-text');
+const heros = document.getElementById('heros');
+const title = document.getElementById('title');
+const restart = document.getElementById('restart');
 
 class Hero {
     constructor(name, hp) {
@@ -54,7 +59,7 @@ class Dwarf extends Hero {
     attack(otherHero) {
         let damage = 100;
         console.log(this.name + " attacked with damage: " + damage + ". ");
-        res += "<strong style='color:#59ba44;'>[ " + this.name + "] </strong>triggered <strong style='color:#e48100;'>[I attacc]</strong> and attacked with " + damage + " damage. ";
+        res += "<strong style='color:#59ba44;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[He attacc]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -68,7 +73,7 @@ class Sprite extends Hero {
     attack(otherHero) {
         let damage = 150;
         console.log(this.name + " attacked with damage: " + damage + ". ");
-        res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>triggered <strong style='color:#e48100;'>[Heart of Fire]</strong> and attacked with " + damage + " damage. ";
+        res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -83,7 +88,7 @@ class Dragon extends Hero {
     attack(otherHero) {
         let damage = 50;
         console.log(this.name + " attacked with damage: " + damage + ". ");
-        res += "<strong style='color:#17DCE5;'>[ " + this.name + "] </strong>triggered <strong style='color:#e48100;'>[Snek Attack]</strong> and attacked with " + damage + " damage. ";
+        res += "<strong style='color:#17DCE5;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Snek Attack]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -140,14 +145,16 @@ let epicFight = new Fight(dwarf, sprite);
 epicFight.go();
 
 function showHeroes() { 
-    document.getElementById("hero").style.display = "flex";
-    document.getElementById("title").style.display = "none";
+    heros.style.display = "flex";
+    title.style.display = "none";
+    text.style.display = "inherit";
     battlelog.style.display = "inherit";
     start.style.display = "none";
+    restart.style.display = "inherit";
  }
 
 function roundResults(){
-    document.getElementById("battlelogContainer").innerHTML = res;
+    battlelogContainer.innerHTML = res;
     modal.style.display = "block";
 }
 
@@ -157,8 +164,12 @@ function clearModal(e) {
     }
 }
 
+function restartGame() {
+    location.reload();
+}
 
 start.addEventListener('click', showHeroes);
 battlelog.addEventListener('click', roundResults);
 window.addEventListener('click', clearModal);
+restart.addEventListener('click', restartGame);
 

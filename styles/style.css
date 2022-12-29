@@ -57,7 +57,7 @@ body {
   display: inline-block;
   padding: 20px 33px;
   border: 0;
-  margin: 20px 0;
+  margin: 20px 10px;
   text-decoration: none;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -69,6 +69,8 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   transition: 0.3s;
+  width: 13rem;
+  justify-content: center;
 }
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
@@ -76,8 +78,12 @@ body {
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #f4ebdc, 0 0 30px #f4ebdc;
 }
 
-#battlelog {
+#choice-text {
   display: none;
+  color: #ffffff;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .heroes-container {
@@ -205,4 +211,15 @@ body {
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent rgba(121, 0, 111, 0.711) transparent;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.btn-container #battlelog {
+  display: none;
+}
+.btn-container #restart {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
