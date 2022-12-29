@@ -140,7 +140,7 @@ let dwarf = new Dwarf("Smoliv ", 2000);
 let sprite = new Sprite("Sylveon ", 1000);
 let dragon = new Dragon("Dragonair ", 2100);
 
-let epicFight = new Fight(dwarf, sprite);
+let epicFight = new Fight(dwarf, dragon);
 epicFight.go();
 
 function showHeroes() { 
