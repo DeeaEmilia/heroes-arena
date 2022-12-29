@@ -70,6 +70,7 @@ body {
   text-transform: uppercase;
   transition: 0.3s;
   justify-content: center;
+  width: 13em;
 }
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
@@ -101,7 +102,6 @@ body {
 }
 .hero-container:hover {
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #f4ebdc, 0 0 30px #f4ebdc, 0 0 40px #f4ebdc, 0 0 50px #f4ebdc;
-  cursor: pointer;
 }
 .hero-container .hero-img-container {
   background: radial-gradient(110.35% 80.79% at 6% 103.92%, rgb(37, 169, 239) 0%, rgba(37, 169, 239, 0) 100%), linear-gradient(169.3deg, rgb(205, 249, 232) 15%, rgba(205, 249, 232, 0) 46%), radial-gradient(123% 73% at 107% 96%, rgb(255, 253, 177) 20%, rgb(254, 228, 191) 60%, rgb(240, 189, 208) 75%, rgba(255, 129, 38, 0) 100%), linear-gradient(0deg, rgb(0, 204, 131) 0%, rgb(0, 204, 131) 100%);
@@ -158,6 +158,29 @@ body {
   padding: 10px 10px;
   font-size: 17px;
 }
+.hero-container .btn-container .select-btn {
+  display: inline-block;
+  padding: 20px 32px;
+  border: 0;
+  margin: 20px 10px;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+  justify-content: center;
+  width: 13em;
+}
+.hero-container .btn-container .select-btn:hover {
+  background-color: rgba(228, 197, 255, 0.3);
+  transition: 0.3s;
+}
 
 .tooltip {
   position: relative;
@@ -165,6 +188,7 @@ body {
 }
 .tooltip img {
   margin: 5px 3px;
+  cursor: pointer;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -194,13 +218,10 @@ body {
   margin-left: -80px;
   padding: 10px;
 }
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip .tooltiptext::after {
+.tooltip:hover .tooltiptext::after {
   content: " ";
   position: absolute;
   bottom: 100%;
-  /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
