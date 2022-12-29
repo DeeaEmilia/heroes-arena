@@ -197,10 +197,9 @@ body {
   box-shadow: inset 0px 5px 5px 0px rgba(255, 255, 255, 0.1), inset 0px -5px 5px 0px rgba(254, 81, 150, 0.1);
   color: #ffffff;
   text-align: center;
-  padding: 5px 0;
+  padding: 15px 0;
   border-radius: 6px;
   opacity: 95%;
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }
@@ -213,7 +212,7 @@ body {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   text-align: left;
-  top: 100%;
+  top: 110%;
   left: 50%;
   margin-left: -80px;
   padding: 10px;
@@ -227,6 +226,16 @@ body {
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent rgba(121, 0, 111, 0.711) transparent;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+figure figcaption {
+  font-size: 0.75em;
+  font-style: italic;
 }
 
 .btn-container {
