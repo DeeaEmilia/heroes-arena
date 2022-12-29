@@ -1,4 +1,4 @@
-let res="Battlelog: <br><br> ";
+let res = "Battlelog: <br><br> ";
 const start = document.getElementById("start");
 const battlelog = document.getElementById("battlelog");
 const modal = document.querySelector(".modal");
@@ -15,6 +15,7 @@ class Hero {
         this.canFly = false;
         this.shield = false;
         this.heal = false;
+        this.extraDamage = false;
     }
 
     attacked(damage) {
@@ -32,7 +33,7 @@ class Hero {
             console.log(this.name + " shielded. ");
             res += this.name + " shielded.  ";
         }
-        
+
         if (this.heal) {
             let chance = Math.random();
             if (chance > 0.7) {
@@ -45,7 +46,7 @@ class Hero {
         this.hp -= damage;
 
         console.log(this.name + " has been attacked. HP reduced by " + damage + ".HP remaining: " + this.hp + ". ");
-        res += this.name + " lost " + damage + " HP.<br>" + this.name + " HP remaining: "  + this.hp + ". <br> ";
+        res += this.name + " lost " + damage + " HP.<br>" + this.name + " HP remaining: " + this.hp + ". <br> ";
     }
 }
 
@@ -68,10 +69,18 @@ class Sprite extends Hero {
     constructor(name, hp) {
         super(name, hp);
         this.canFly = true;
+        this.extraDamage = true;
     }
 
     attack(otherHero) {
-        let damage = 150;
+        let damage = 100;
+        let chance = Math.random();
+        if (chance > 0.6) {
+            damage += 100;
+            console.log("The attack triggered <strong style='color:#e80201;'>[Sass] </strong> for extra 100 damage. ");
+            res += "The attack triggered <strong style='color:#e80201;'>[" +this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
+        }
+
         console.log(this.name + " attacked with damage: " + damage + ". ");
         res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
@@ -115,7 +124,7 @@ class Fight {
     findWinner() {
         if (this.hero1.hp > 0) {
             console.log(this.hero1.name + " won with " + this.hero1.hp + " HP left. ");
-            res += "<strong style='color:#59ba44;'>" +  this.hero1.name + " won with " + this.hero1.hp + " HP left. </strong>"
+            res += "<strong style='color:#59ba44;'>" + this.hero1.name + " won with " + this.hero1.hp + " HP left. </strong>"
 
         } else if (this.hero2.hp > 0) {
             console.log(this.hero2.name + " won with " + this.hero2.hp + " HP left. ");
@@ -141,19 +150,19 @@ let dwarf = new Dwarf("Smoliv ", 2000);
 let sprite = new Sprite("Sylveon ", 1000);
 let dragon = new Dragon("Dragonair ", 2100);
 
-let epicFight = new Fight(dwarf, dragon);
+let epicFight = new Fight(dwarf, sprite);
 epicFight.go();
 
-function showHeroes() { 
+function showHeroes() {
     heros.style.display = "flex";
     title.style.display = "none";
     battlelog.style.display = "inherit";
     restart.style.display = "inherit";
     startFightBtn.style.display = "inherit";
     start.style.display = "none";
- }
+}
 
-function roundResults(){
+function roundResults() {
     modalContainer.innerHTML = res;
     modal.style.display = "block";
 }
@@ -163,11 +172,11 @@ function clearModal(e) {
         modal.style.display = 'none';
     }
 }
-function restartGame(){
+function restartGame() {
     location.reload();
 }
 
-function startFight(){
+function startFight() {
 
 }
 
