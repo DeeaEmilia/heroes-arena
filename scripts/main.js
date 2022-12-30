@@ -2,7 +2,7 @@ let res = "Battlelog: <br><br> ";
 const start = document.getElementById("start");
 const battlelog = document.getElementById("battlelog");
 const modal = document.querySelector(".modal");
-const heros = document.getElementById("heros")
+const heros = document.querySelector("#heros")
 const title = document.getElementById("title");
 const modalContainer = document.getElementById("modal-container");
 const restart = document.getElementById("restart");
@@ -154,8 +154,10 @@ let epicFight = new Fight(dwarf, sprite);
 epicFight.go();
 
 function showHeroes() {
-    heros.style.display = "flex";
-    title.style.display = "none";
+    // heros.style.display = "flex";
+    heros.classList.add('d-flex');
+    // title.style.display = "none";
+    title.classList.add('d-none');
     battlelog.style.display = "inherit";
     restart.style.display = "inherit";
     startFightBtn.style.display = "inherit";

@@ -218,7 +218,7 @@ body {
         visibility: hidden;
         width: 150px;
         background: linear-gradient(90deg,
-                rgb(63, 7, 72) 0%,
+                rgb(63, 7, 72) 0%, 
                 rgba(121, 0, 111, 0.711) 100%);
         box-shadow:
             inset 0px 5px 5px 0px rgba(255, 255, 255, 0.1),
@@ -271,6 +271,7 @@ figure {
         font-style: italic;
     }
 }
+
 .btn-container {
     display: flex;
     justify-content: center;
@@ -289,3 +290,38 @@ figure {
     }
 }
 
+/*IPAD*/
+@media only screen and (max-width: 1024px) {
+    // body {
+    //     background-image: none;
+    //     background-color: red;
+    // }
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+    // body {
+    //     background-image: none;
+    //     background-color: blue;
+    // }
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    // body {
+    //     background-image: none;
+    //     background-color: pink;
+    // }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
