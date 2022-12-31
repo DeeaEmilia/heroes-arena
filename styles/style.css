@@ -44,7 +44,7 @@ body {
 }
 .main-container .title {
   color: #ffffff;
-  font-size: 90px;
+  font-size: 75px;
   text-align: center;
   margin: 6vh 3vw;
 }
@@ -247,7 +247,6 @@ figure figcaption {
 }
 .btn-container #start-fight {
   display: none;
-  width: 25vw;
 }
 .btn-container #start-fight:disabled, .btn-container #start-fight[disabled] {
   cursor: not-allowed;
