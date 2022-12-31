@@ -110,9 +110,9 @@ class Fight {
 
     findWinner() {
         if (this.hero1.hp > 0) {
-            res += "<strong style='color:#59ba44;'>" + this.hero1.name + " won with " + this.hero1.hp + " HP left. </strong>"
+            res += "<strong style='color:#59ba44; font-size:30px;'>" + this.hero1.name + " won with " + this.hero1.hp + " HP left. </strong>"
         } else if (this.hero2.hp > 0) {
-            res += "<strong style='color:#59ba44;'>" + this.hero2.name + " won with " + this.hero2.hp + " HP left.  </strong>"
+            res += "<strong style='color:#59ba44;font-size:30px;'>" + this.hero2.name + " won with " + this.hero2.hp + " HP left.  </strong>"
         } else {
             res += "<strong style='color:#f29b9b;'> No heroes left alive! </strong>";
         }
