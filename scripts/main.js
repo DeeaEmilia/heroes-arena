@@ -7,6 +7,10 @@ const title = document.querySelector("#title");
 const modalContainer = document.querySelector("#modal-container");
 const restart = document.querySelector("#restart");
 const startFightBtn = document.querySelector("#start-fight");
+const selectSprite = document.querySelector("#select-sprite");
+const selectDragon = document.querySelector("#select-dragon");
+const selectDwarf = document.querySelector("#select-dwarf");
+const selectBtn = document.querySelectorAll(".select-btn");
 
 class Hero {
     constructor(name, hp) {
@@ -22,7 +26,7 @@ class Hero {
         if (this.canFly) {
             let chance = Math.random();
             if (chance > 0.5) {
-                console.log(this.name + " flew away. ");
+                // console.log(this.name + " flew away. ");
                 damage = 0;
                 res += this.name + " flew away. ";
             }
@@ -30,22 +34,21 @@ class Hero {
 
         if (this.shield) {
             damage *= 0.8;
-            console.log(this.name + " shielded. ");
+            // console.log(this.name + " shielded. ");
             res += this.name + " shielded.  ";
         }
 
         if (this.heal) {
             let chance = Math.random();
             if (chance > 0.7) {
-                console.log(this.name + " healed for 10%. ");
+                // console.log(this.name + " healed for 10%. ");
                 damage *= 0.9;
                 res += this.name + "healed for 10%. "
             }
         }
 
         this.hp -= damage;
-
-        console.log(this.name + " has been attacked. HP reduced by " + damage + ".HP remaining: " + this.hp + ". ");
+        // console.log(this.name + " has been attacked. HP reduced by " + damage + ".HP remaining: " + this.hp + ". ");
         res += this.name + " lost " + damage + " HP.<br>" + this.name + " HP remaining: " + this.hp + ". <br> ";
     }
 }
@@ -59,7 +62,7 @@ class Dwarf extends Hero {
 
     attack(otherHero) {
         let damage = 100;
-        console.log(this.name + " attacked with damage: " + damage + ". ");
+        // console.log(this.name + " attacked with damage: " + damage + ". ");
         res += "<strong style='color:#59ba44;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[He attacc]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
@@ -77,11 +80,10 @@ class Sprite extends Hero {
         let chance = Math.random();
         if (chance > 0.6) {
             damage += 100;
-            console.log("The attack triggered <strong style='color:#e80201;'>[Sass] </strong> for extra 100 damage. ");
+            // console.log("The attack triggered <strong style='color:#e80201;'>[Sass] </strong> for extra 100 damage. ");
             res += "The attack triggered <strong style='color:#e80201;'>[" +this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
         }
-
-        console.log(this.name + " attacked with damage: " + damage + ". ");
+        // console.log(this.name + " attacked with damage: " + damage + ". ");
         res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
@@ -96,7 +98,7 @@ class Dragon extends Hero {
 
     attack(otherHero) {
         let damage = 50;
-        console.log(this.name + " attacked with damage: " + damage + ". ");
+        // console.log(this.name + " attacked with damage: " + damage + ". ");
         res += "<strong style='color:#17DCE5;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Snek Attack]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
@@ -123,15 +125,15 @@ class Fight {
 
     findWinner() {
         if (this.hero1.hp > 0) {
-            console.log(this.hero1.name + " won with " + this.hero1.hp + " HP left. ");
+            // console.log(this.hero1.name + " won with " + this.hero1.hp + " HP left. ");
             res += "<strong style='color:#59ba44;'>" + this.hero1.name + " won with " + this.hero1.hp + " HP left. </strong>"
 
         } else if (this.hero2.hp > 0) {
-            console.log(this.hero2.name + " won with " + this.hero2.hp + " HP left. ");
+            // console.log(this.hero2.name + " won with " + this.hero2.hp + " HP left. ");
             res += "<strong style='color:#59ba44;'>" + this.hero2.name + " won with " + this.hero2.hp + " HP left.  </strong>"
 
         } else {
-            console.log("No heroes left alive! ");
+            // console.log("No heroes left alive! ");
             res += "<strong style='color:#e80201;'> No heroes left alive! </strong>";
         }
     }
@@ -176,13 +178,40 @@ function restartGame() {
     location.reload();
 }
 
-function startFight() {
+function computerChoice(e) {
 
+    let computerChoice;
+    let option = Math.random();
+
+    if (e.target == selectSprite) {
+        if (option > 0.5) {
+            computerChoice == selectDragon;
+            selectDragon.classList.add('test');
+        } else { 
+            computerChoice == selectDwarf;
+            selectDwarf.classList.add('test');
+        }
+    } else if (e.traget == selectDragon) {
+        if (option > 0.5) {
+            computerChoice == selectDwarf
+        } else {
+            computerChoice == selectSprite;
+        } 
+    } else if (e.traget == selectDwarf) {
+        if (option > 0.5) {
+            computerChoice == selectSprite;
+        } else {
+            computerChoice == selectDragon;
+        }
+    }
+    console.log(computerChoice);
 }
 
 start.addEventListener('click', showHeroes);
 battlelog.addEventListener('click', roundResults);
 window.addEventListener('click', clearModal);
 restart.addEventListener('click', restartGame);
-startFightBtn.addEventListener('click', startFight);
+selectSprite.addEventListener('click', computerChoice);
+selectDragon.addEventListener('click', computerChoice);
+selectDwarf.addEventListener('click', computerChoice);
 
