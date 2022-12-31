@@ -74,18 +74,32 @@ body {
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #f4ebdc, 0 0 30px #f4ebdc;
 }
 
+.instructions {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 2rem;
+  margin: 2rem;
+  color: #d3d3d3;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+}
+.instructions h2 {
+  margin: 1rem;
+}
+.instructions p {
+  line-height: 1.6;
+}
+
 .heroes-container {
   display: none;
   justify-content: space-evenly;
   color: #d3d3d3;
   flex-flow: row wrap;
   align-items: center;
-}
-.heroes-container h2 {
-  display: flex;
-  flex-basis: 100%;
-  justify-content: space-around;
-  padding: 2rem;
 }
 
 .hero-container {
@@ -264,11 +278,15 @@ figure figcaption {
   display: none;
 }
 
-#select-sprite:focus, #select-dragon:focus, #select-dwarf:focus {
+#select-sprite:focus,
+#select-dragon:focus,
+#select-dwarf:focus {
   background-color: #4eff5d;
   color: #333;
 }
-#select-sprite:active, #select-dragon:active, #select-dwarf:active {
+#select-sprite:active,
+#select-dragon:active,
+#select-dwarf:active {
   background-color: #4eff5d;
   color: #333;
 }

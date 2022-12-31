@@ -51,6 +51,27 @@ body {
 
 }
 
+.instructions {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    padding: 2rem;
+    margin: 2rem;
+    color: #d3d3d3;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255, 255, 255, 0.8);
+
+
+    h2 {
+        margin: 1rem;
+    }
+    p {
+        line-height: 1.6;
+    }
+}
 
 .heroes-container {
     display: none;
@@ -58,22 +79,13 @@ body {
     color: #d3d3d3;
     flex-flow: row wrap;
     align-items: center;
-
-    h2 {
-        display:flex;
-        flex-basis: 100%;
-        justify-content: space-around;
-        padding: 2rem;
-    }
 }
-
 
 .hero-container {
     margin: 1vh 2vw;
     padding: 4vh 4vw;
     border-radius: 20px;
     display: flex;
-    // flex-basis: 30%;
     justify-content: flex-start;
     flex-direction: column;
     background-color: #eed3b0;
@@ -191,7 +203,6 @@ body {
             display: inline-block;
             padding: 20px 32px;
             border: 0;
-            
             text-decoration: none;
             border-radius: 15px;
             background-color: rgba(255, 255, 255, 0.1);
@@ -312,7 +323,9 @@ figure {
     }
 }
 
-#select-sprite, #select-dragon, #select-dwarf {
+#select-sprite,
+#select-dragon,
+#select-dwarf {
 
     &:focus {
         background-color: #4eff5d;
