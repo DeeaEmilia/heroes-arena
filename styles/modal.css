@@ -10,7 +10,7 @@
   background: rgba(0, 0, 0, 0.846);
 }
 .modal .modal-content {
-  background: linear-gradient(90deg, rgba(251, 131, 131, 0.1) 0%, rgba(254, 81, 150, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(33, 31, 31, 0.7) 0%, rgba(254, 81, 150, 0.5) 100%);
   box-shadow: inset 0px 5px 5px 0px rgba(255, 255, 255, 0.1), inset 0px -5px 5px 0px rgba(254, 81, 150, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
