@@ -158,60 +158,74 @@ epicFight.go();
 function showHeroes() {
     heros.classList.add('d-flex');
     title.classList.add('d-none');
-    battlelog.classList.add('d-inherit');
-    restart.classList.add('d-inherit');
-    startFightBtn.classList.add('d-inherit');
+    battlelog.style.display = "inherit";
+    restart.style.display = "inherit";
+    startFightBtn.style.display = "inherit";
     start.classList.add('d-none');
 }
 
 function roundResults() {
     modalContainer.innerHTML = res;
-    modal.classList.add('blcok');
+    modal.style.display = "block";
 }
 
 function clearModal(e) {
     if (e.target == modal) {
-        modal.classList.add('d-none');
+        modal.style.display = "none";
     }
 }
 function restartGame() {
     location.reload();
 }
 
-function computerChoice(e) {
-
+function test(e) {
+    let playerChoice;
     let computerChoice;
     let option = Math.random();
 
     if (e.target == selectSprite) {
         if (option > 0.5) {
-            computerChoice == selectDragon;
-            selectDragon.classList.add('test');
+            computerChoice = selectDragon;
+            selectDwarf.style.display = "none";
+            console.log("Computer chose Dragon.");
         } else { 
-            computerChoice == selectDwarf;
-            selectDwarf.classList.add('test');
+            computerChoice = selectDwarf;
+            selectDragon.style.display = "none";
+            console.log("Computer chose Dwarf.");
         }
+
+        playerChoice = selectSprite;
+
     } else if (e.traget == selectDragon) {
         if (option > 0.5) {
-            computerChoice == selectDwarf
+            computerChoice = selectDwarf
+            console.log("Computer chose Dwarf.");
         } else {
-            computerChoice == selectSprite;
+            computerChoice = selectSprite;
+            console.log("Computer chose Sprite.");
         } 
+
+        playerChoice = selectDragon;
+
     } else if (e.traget == selectDwarf) {
         if (option > 0.5) {
-            computerChoice == selectSprite;
+            computerChoice = selectSprite;
+            console.log("Computer chose Sprite.");
         } else {
-            computerChoice == selectDragon;
+            computerChoice = selectDragon;
+            console.log("Computer chose Dragon.");
         }
+        playerChoice = selectDwarf;
     }
-    console.log(computerChoice);
+    console.log(playerChoice, computerChoice);
 }
 
 start.addEventListener('click', showHeroes);
 battlelog.addEventListener('click', roundResults);
 window.addEventListener('click', clearModal);
 restart.addEventListener('click', restartGame);
-selectSprite.addEventListener('click', computerChoice);
-selectDragon.addEventListener('click', computerChoice);
-selectDwarf.addEventListener('click', computerChoice);
+
+selectSprite.addEventListener('click', test);
+selectDragon.addEventListener('click', test);
+selectDwarf.addEventListener('click', test);
 
