@@ -100,11 +100,9 @@ class Fight {
         if (this.turn === 0) {
             res += "<strong style='color:#e72f2f;font-size:20px;'><br><br>Computer: </strong>"
             this.hero1.attack(this.hero2);
-            
         } else {
             res += "<strong style='color:#61dd19;font-size:20px;'><br><br>You: </strong>"
             this.hero2.attack(this.hero1);
-
         }
     }
 
@@ -153,7 +151,6 @@ function getComputerChoice(arr) {
 }
 
 function startFightNow() {
-    
     let epicFight = new Fight(getComputerChoice(array), playerChoice);
     epicFight.go();
     battlelog.style.display = "inherit";
