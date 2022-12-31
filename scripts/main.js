@@ -51,7 +51,7 @@ class Dwarf extends Hero {
 
     attack(otherHero) {
         let damage = 100;
-        res += "<strong style='color:#59ba44;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[He attacc]</strong> and dealt " + damage + " damage. ";
+        res += "<strong style='color:#32a87d;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[He attacc]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -70,7 +70,7 @@ class Sprite extends Hero {
             damage += 100;
             res += "The attack triggered <strong style='color:#f29b9b;'>[" + this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
         }
-        res += "<strong style='color:#f29b9b;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
+        res += "<strong style='color:#df88fc;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -84,7 +84,7 @@ class Dragon extends Hero {
 
     attack(otherHero) {
         let damage = 50;
-        res += "<strong style='color:#17DCE5;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Snek Attack]</strong> and dealt " + damage + " damage. ";
+        res += "<strong style='color:#44bbf2;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Snek Attack]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -98,9 +98,13 @@ class Fight {
 
     performAttack() {
         if (this.turn === 0) {
+            res += "<strong style='color:#e72f2f;font-size:20px;'><br><br>Computer: </strong>"
             this.hero1.attack(this.hero2);
+            
         } else {
+            res += "<strong style='color:#61dd19;font-size:20px;'><br><br>You: </strong>"
             this.hero2.attack(this.hero1);
+
         }
     }
 
@@ -110,11 +114,11 @@ class Fight {
 
     findWinner() {
         if (this.hero1.hp > 0) {
-            res += "<strong style='color:#59ba44; font-size:30px;'>" + this.hero1.name + " won with " + this.hero1.hp + " HP left. </strong>"
+            res += "<strong style='color:#59ba44; font-size:30px;'><br><br>" + this.hero1.name + " won with " + this.hero1.hp + " HP left. </strong>"
         } else if (this.hero2.hp > 0) {
-            res += "<strong style='color:#59ba44;font-size:30px;'>" + this.hero2.name + " won with " + this.hero2.hp + " HP left.  </strong>"
+            res += "<strong style='color:#59ba44;font-size:30px;'><br><br>" + this.hero2.name + " won with " + this.hero2.hp + " HP left.  </strong>"
         } else {
-            res += "<strong style='color:#f29b9b;'> No heroes left alive! </strong>";
+            res += "<strong style='color:#f29b9b;'><br><br> No heroes left alive! </strong>";
         }
     }
 
