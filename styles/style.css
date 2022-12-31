@@ -242,6 +242,15 @@ figure figcaption {
 .btn-container #start-fight {
   display: none;
 }
+.btn-container #start-fight:disabled, .btn-container #start-fight[disabled] {
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.btn-container #start-fight:disabled:hover, .btn-container #start-fight[disabled]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+  box-shadow: none;
+}
 .btn-container #battlelog {
   display: none;
 }

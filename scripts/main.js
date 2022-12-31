@@ -139,17 +139,21 @@ function getPlayerChoice(selection) {
     playerChoice = selection;
     console.log(playerChoice);
     startFight.disabled = false;
+    heros.style.display = "none";
 }
 
-function getRandomItem(arr) {
+function getComputerChoice(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     const item = arr[randomIndex];
     return item;
 }
 
 function startFightNow() {
-    let epicFight = new Fight(getRandomItem(array), playerChoice);
+    
+    let epicFight = new Fight(getComputerChoice(array), playerChoice);
     epicFight.go();
+    battlelog.style.display = "inherit";
+    startFight.disabled = true;
 }
 
 selectSprite.addEventListener('click', function(){getPlayerChoice(sprite);});
