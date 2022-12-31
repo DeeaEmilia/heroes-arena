@@ -1,12 +1,12 @@
 let res = "Battlelog: <br><br> ";
-const start = document.getElementById("start");
-const battlelog = document.getElementById("battlelog");
+const start = document.querySelector("#start");
+const battlelog = document.querySelector("#battlelog");
 const modal = document.querySelector(".modal");
 const heros = document.querySelector("#heros")
-const title = document.getElementById("title");
-const modalContainer = document.getElementById("modal-container");
-const restart = document.getElementById("restart");
-const startFightBtn = document.getElementById("start-fight");
+const title = document.querySelector("#title");
+const modalContainer = document.querySelector("#modal-container");
+const restart = document.querySelector("#restart");
+const startFightBtn = document.querySelector("#start-fight");
 
 class Hero {
     constructor(name, hp) {
@@ -154,24 +154,22 @@ let epicFight = new Fight(dwarf, sprite);
 epicFight.go();
 
 function showHeroes() {
-    // heros.style.display = "flex";
     heros.classList.add('d-flex');
-    // title.style.display = "none";
     title.classList.add('d-none');
-    battlelog.style.display = "inherit";
-    restart.style.display = "inherit";
-    startFightBtn.style.display = "inherit";
-    start.style.display = "none";
+    battlelog.classList.add('d-inherit');
+    restart.classList.add('d-inherit');
+    startFightBtn.classList.add('d-inherit');
+    start.classList.add('d-none');
 }
 
 function roundResults() {
     modalContainer.innerHTML = res;
-    modal.style.display = "block";
+    modal.classList.add('blcok');
 }
 
 function clearModal(e) {
     if (e.target == modal) {
-        modal.style.display = 'none';
+        modal.classList.add('d-none');
     }
 }
 function restartGame() {
