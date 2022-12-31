@@ -70,7 +70,7 @@ class Sprite extends Hero {
             damage += 100;
             res += "The attack triggered <strong style='color:#f29b9b;'>[" + this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
         }
-        res += "<strong style='color:#df88fc;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
+        res += "<strong style='color:#f29b9b;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
