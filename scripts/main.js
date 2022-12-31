@@ -68,9 +68,9 @@ class Sprite extends Hero {
         let chance = Math.random();
         if (chance > 0.6) {
             damage += 100;
-            res += "The attack triggered <strong style='color:#e80201;'>[" + this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
+            res += "The attack triggered <strong style='color:#f29b9b;'>[" + this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
         }
-        res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
+        res += "<strong style='color:#f29b9b;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -114,7 +114,7 @@ class Fight {
         } else if (this.hero2.hp > 0) {
             res += "<strong style='color:#59ba44;'>" + this.hero2.name + " won with " + this.hero2.hp + " HP left.  </strong>"
         } else {
-            res += "<strong style='color:#e80201;'> No heroes left alive! </strong>";
+            res += "<strong style='color:#f29b9b;'> No heroes left alive! </strong>";
         }
     }
 
