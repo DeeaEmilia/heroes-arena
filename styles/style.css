@@ -262,4 +262,12 @@ figure figcaption {
 
 .d-none {
   display: none;
+}
+
+.d-inherit {
+  display: inherit;
+}
+
+.test {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */

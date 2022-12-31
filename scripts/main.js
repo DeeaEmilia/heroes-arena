@@ -1,16 +1,8 @@
 let res = "Battlelog: <br><br> ";
-const start = document.querySelector("#start");
-const battlelog = document.querySelector("#battlelog");
-const modal = document.querySelector(".modal");
-const heros = document.querySelector("#heros")
-const title = document.querySelector("#title");
-const modalContainer = document.querySelector("#modal-container");
-const restart = document.querySelector("#restart");
-const startFightBtn = document.querySelector("#start-fight");
 const selectSprite = document.querySelector("#select-sprite");
 const selectDragon = document.querySelector("#select-dragon");
 const selectDwarf = document.querySelector("#select-dwarf");
-const selectBtn = document.querySelectorAll(".select-btn");
+
 
 class Hero {
     constructor(name, hp) {
@@ -81,7 +73,7 @@ class Sprite extends Hero {
         if (chance > 0.6) {
             damage += 100;
             // console.log("The attack triggered <strong style='color:#e80201;'>[Sass] </strong> for extra 100 damage. ");
-            res += "The attack triggered <strong style='color:#e80201;'>[" +this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
+            res += "The attack triggered <strong style='color:#e80201;'>[" + this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
         }
         // console.log(this.name + " attacked with damage: " + damage + ". ");
         res += "<strong style='color:#e80201;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
@@ -104,6 +96,14 @@ class Dragon extends Hero {
     }
 }
 
+class ChooseHero {
+    constructor (player1, player2) {
+        this.player1 = player1;
+        this.player2 = player2;
+
+        
+    }
+}
 class Fight {
     constructor(hero1, hero2) {
         this.hero1 = hero1;
@@ -123,6 +123,7 @@ class Fight {
         this.turn = 1 - this.turn;
     }
 
+
     findWinner() {
         if (this.hero1.hp > 0) {
             // console.log(this.hero1.name + " won with " + this.hero1.hp + " HP left. ");
@@ -139,6 +140,7 @@ class Fight {
     }
 
     go() {
+
         do {
             this.performAttack();
             this.changeTurn();
@@ -147,85 +149,76 @@ class Fight {
     }
 }
 
-
 let dwarf = new Dwarf("Smoliv ", 2000);
 let sprite = new Sprite("Sylveon ", 1000);
 let dragon = new Dragon("Dragonair ", 2100);
 
-let epicFight = new Fight(dwarf, sprite);
+let playerChoice;
+let computerChoice;
+let epicFight = new Fight(sprite, dwarf);
 epicFight.go();
 
-function showHeroes() {
-    heros.classList.add('d-flex');
-    title.classList.add('d-none');
-    battlelog.style.display = "inherit";
-    restart.style.display = "inherit";
-    startFightBtn.style.display = "inherit";
-    start.classList.add('d-none');
-}
-
-function roundResults() {
-    modalContainer.innerHTML = res;
-    modal.style.display = "block";
-}
-
-function clearModal(e) {
-    if (e.target == modal) {
-        modal.style.display = "none";
-    }
-}
-function restartGame() {
-    location.reload();
-}
-
-function test(e) {
-    let playerChoice;
-    let computerChoice;
+function getComputerChoice(e) {
+    let player;
+    let computer;
     let option = Math.random();
 
     if (e.target == selectSprite) {
         if (option > 0.5) {
-            computerChoice = selectDragon;
+            computer = selectDragon;
+            computerChoice = dragon;
             selectDwarf.style.display = "none";
             console.log("Computer chose Dragon.");
-        } else { 
-            computerChoice = selectDwarf;
+        } else {
+            computer = selectDwarf;
+            computerChoice = dwarf;
             selectDragon.style.display = "none";
             console.log("Computer chose Dwarf.");
         }
+        playerChoice = sprite;
+        player = selectSprite;
+        console.log("You chose Sylveon.");
 
-        playerChoice = selectSprite;
-
-    } else if (e.traget == selectDragon) {
+    } else if (e.target == selectDragon) {
         if (option > 0.5) {
-            computerChoice = selectDwarf
+            computer = selectDwarf;
+            computerChoice = dwarf;
+            selectSprite.style.display = "none";
             console.log("Computer chose Dwarf.");
         } else {
-            computerChoice = selectSprite;
+            computer = selectSprite;
+            computerChoice = sprite;
+            selectDwarf.style.display = "none";
             console.log("Computer chose Sprite.");
-        } 
+        }
 
-        playerChoice = selectDragon;
+        player = selectDragon;
+        playerChoice = dragon;
+        console.log("You chose Dragonair.");
 
-    } else if (e.traget == selectDwarf) {
+    } else if (e.target == selectDwarf) {
         if (option > 0.5) {
-            computerChoice = selectSprite;
+            computer = selectSprite;
+            computerChoice = sprite;
+            selectDragon.style.display = "none";
             console.log("Computer chose Sprite.");
         } else {
-            computerChoice = selectDragon;
+            computer = selectDragon;
+            computerChoice = dragon;
+            selectSprite.style.display = "none";
             console.log("Computer chose Dragon.");
         }
-        playerChoice = selectDwarf;
+        player = selectDwarf;
+        playerChoice = dwarf;
+        console.log("You chose Smoliv.");
     }
-    console.log(playerChoice, computerChoice);
+    console.log(player, computer);
 }
 
-start.addEventListener('click', showHeroes);
-battlelog.addEventListener('click', roundResults);
-window.addEventListener('click', clearModal);
-restart.addEventListener('click', restartGame);
 
-selectSprite.addEventListener('click', test);
-selectDragon.addEventListener('click', test);
-selectDwarf.addEventListener('click', test);
+
+
+selectSprite.addEventListener('click', getComputerChoice);
+selectDragon.addEventListener('click', getComputerChoice);
+selectDwarf.addEventListener('click', getComputerChoice);
 

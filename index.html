@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/modal.css" />
-
+    <link rel="stylesheet" href="styles/winnermodal.css" />
 
     <title>Heroes</title>
   </head>
@@ -101,7 +101,7 @@
             </div>
 
             <div class="btn-container">
-              <button class="select-btn" id="select-sprite"> Select </button>
+              <button class="select-btn choice" id="select-sprite"> Select </button>
             </div>
           </section>
 
@@ -186,7 +186,7 @@
             </div>
 
             <div class="btn-container">
-              <button class="select-btn" id="select-dragon"> Select </button>
+              <button class="select-btn choice" id="select-dragon"> Select </button>
             </div>
           </section>
 
@@ -270,7 +270,7 @@
             </div>
 
             <div class="btn-container">
-              <button class="select-btn" id="select-dwarf"> Select </button>
+              <button class="select-btn choice" id="select-dwarf"> Select </button>
             </div>
 
           </section>
@@ -288,9 +288,15 @@
         <button class="btn" id="battlelog"> Battlelog </button>
         <button class="btn" id="restart"> Restart </button>
       </div>
+
+      <div class="winner-modal" id="winner-modal"> 
+        <div id="result" class="modal-content2">
+        </div>
+      </div>
       <!-- to do: script pt webp images + toate culorile in hex + pus totul in query selector-->
     </main>
     <script src="scripts/main.js"></script>
+    <script src="scripts/functionality.js"></script>
 
   </body>
 
