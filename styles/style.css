@@ -41,12 +41,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
 }
 .main-container .title {
   color: #ffffff;
   font-size: 90px;
   text-align: center;
+  margin: 6vh 3vw;
 }
 
 .btn {
@@ -79,11 +79,18 @@ body {
   justify-content: space-evenly;
   color: #d3d3d3;
   flex-flow: row wrap;
+  align-items: center;
+}
+.heroes-container h2 {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  padding: 2rem;
 }
 
 .hero-container {
-  margin: 2vh 2vw;
-  padding: 5vh 5vw;
+  margin: 1vh 2vw;
+  padding: 4vh 4vw;
   border-radius: 20px;
   display: flex;
   justify-content: flex-start;
@@ -105,8 +112,8 @@ body {
 }
 .hero-container .hero-img-container .hero-img {
   margin: 20px;
-  width: 210px;
-  height: 210px;
+  width: 150px;
+  height: 150px;
 }
 .hero-container .hero-header {
   display: flex;
@@ -158,7 +165,6 @@ body {
   display: inline-block;
   padding: 20px 32px;
   border: 0;
-  margin: 20px 10px;
   text-decoration: none;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -241,6 +247,7 @@ figure figcaption {
 }
 .btn-container #start-fight {
   display: none;
+  width: 25vw;
 }
 .btn-container #start-fight:disabled, .btn-container #start-fight[disabled] {
   cursor: not-allowed;
@@ -256,6 +263,15 @@ figure figcaption {
 }
 .btn-container #restart {
   display: none;
+}
+
+#select-sprite:focus, #select-dragon:focus, #select-dwarf:focus {
+  background-color: #4eff5d;
+  color: #333;
+}
+#select-sprite:active, #select-dragon:active, #select-dwarf:active {
+  background-color: #4eff5d;
+  color: #333;
 }
 
 /*IPAD*/

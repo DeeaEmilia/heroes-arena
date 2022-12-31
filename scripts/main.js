@@ -139,7 +139,7 @@ function getPlayerChoice(selection) {
     playerChoice = selection;
     console.log(playerChoice);
     startFight.disabled = false;
-    heros.style.display = "none";
+    // heros.style.display = "none";
 }
 
 function getComputerChoice(arr) {
