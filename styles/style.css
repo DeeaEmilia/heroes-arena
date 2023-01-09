@@ -90,7 +90,7 @@ body {
 .instructions h2 {
   margin: 1rem;
 }
-.instructions p {
+.instructions li {
   line-height: 1.6;
 }
 
