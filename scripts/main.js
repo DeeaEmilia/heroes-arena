@@ -51,7 +51,7 @@ class Dwarf extends Hero {
 
     attack(otherHero) {
         let damage = 100;
-        res += "<strong style='color:#32a87d;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[He attacc]</strong> and dealt " + damage + " damage. ";
+        res += "<strong>[ " + this.name + "] </strong>used <strong>[He attacc]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -68,9 +68,9 @@ class Sprite extends Hero {
         let chance = Math.random();
         if (chance > 0.6) {
             damage += 100;
-            res += "The attack triggered <strong style='color:#f29b9b;'>[" + this.name + "] </strong> skill <strong style ='color:#e48100;'>[Sass] </strong> for extra 50 damage. ";
+            res += "The attack triggered <strong>[" + this.name + "] </strong> skill <strong>[Sass] </strong> for extra 50 damage. ";
         }
-        res += "<strong style='color:#f29b9b;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
+        res += "<strong>[ " + this.name + "] </strong>used <strong>[Heart of Fire]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
@@ -84,7 +84,7 @@ class Dragon extends Hero {
 
     attack(otherHero) {
         let damage = 50;
-        res += "<strong style='color:#44bbf2;'>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Snek Attack]</strong> and dealt " + damage + " damage. ";
+        res += "<strong>[ " + this.name + "] </strong>used <strong style='color:#e48100;'>[Snek Attack]</strong> and dealt " + damage + " damage. ";
         otherHero.attacked(damage);
     }
 }
