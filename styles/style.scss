@@ -238,7 +238,7 @@ body {
         visibility: hidden;
         width: 150px;
         background: linear-gradient(90deg,
-                rgb(63, 7, 72) 0%,
+                rgb(63, 7, 72, 1) 0%,
                 rgba(121, 0, 111, 0.711) 100%);
         box-shadow:
             inset 0px 5px 5px 0px rgba(255, 255, 255, 0.1),
@@ -376,8 +376,4 @@ figure {
 
 .d-inherit {
     display: inherit;
-}
-
-.test {
-    background-color: red;
 }
