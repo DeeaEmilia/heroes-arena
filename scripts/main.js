@@ -117,7 +117,7 @@ class Fight {
     }
 
     changeTurn() {
-        //count the turns so it shows up in the battlelog
+        //count the turns so it shows up in the battlelog. Ty Alex for the hint.
         this.turn++;
     }
 

@@ -1,3 +1,4 @@
+//imports the reseted styles
 @import 'base';
 
 body {
@@ -7,24 +8,26 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: #0e0c55;
-
 }
 
-
 .main-container {
+    //gets the flex display. not sure if it was the best option, grid might work even better. 
     display: flex;
     flex-direction: column;
+    //this aligns the items vertically because the direction is column, which means they will stay centered
     align-items: center;
 
     .title {
         color: #ffffff;
         font-size: 75px;
         text-align: center;
+        //might be better with media queries or clamp function so don't take this as a final option. Will work on it later.
         margin: 6vh 3vw;
     }
 }
 
 .btn {
+    //most of this is self-explanatory
     display: inline-block;
     padding: 20px 32px;
     border: 0;
@@ -35,12 +38,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
     color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
+    font-size: 15px;
+    //styling choice. Not preferred if there's a lot of text as it might cause issues for people with dyslexia or with sight problems.
     letter-spacing: 2px;
     cursor: pointer;
     text-transform: uppercase;
     transition: 0.3s;
     justify-content: center;
+    //width take the size based on the font. If in the future I decide to change the font size for different screens, this will automatically change too.
     width: 13em;
 
     &:hover {
@@ -48,13 +53,12 @@ body {
         transition: 0.3s;
         box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #f4ebdc, 0 0 30px #f4ebdc;
     }
-
 }
 
 .instructions {
+    //most of this is self-explanatory
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
     padding: 2rem;
     margin: 2rem;
     color: #d3d3d3;
@@ -62,21 +66,22 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
-    color: rgba(255, 255, 255, 0.8);
-
-
+    
     h2 {
         margin: 1rem;
     }
-    li {
+    ol {
+        //left some space between the rows of the list
         line-height: 1.6;
     }
 }
 
 .heroes-container {
+    //gets the display none which will be changed with js
     display: none;
     justify-content: space-evenly;
     color: #d3d3d3;
+    //row wrap will send one or two of the three heros a row below, depending on the screen size. Again, grid might be better here but tbd.
     flex-flow: row wrap;
     align-items: center;
 }
@@ -98,6 +103,7 @@ body {
         inset 0px 5px 5px 0px rgba(255, 255, 255, 0.1),
         inset 0px -5px 5px 0px rgba(254, 81, 150, 0.1);
     backdrop-filter: blur(5px);
+    //vendoer prefix for chrome. should add -moz- for mozilla and -o- for opera as well. Might use a postprocessor to do that.
     -webkit-backdrop-filter: blur(5px);
 
     &:hover {
@@ -105,6 +111,7 @@ body {
     }
 
     .hero-img-container {
+        //made the border background in a gradient generator and the border radius in a radius generator found online. Ty Marius for the hint
         background:
             radial-gradient(110.35% 80.79% at 6% 103.92%,
                 rgba(37, 169, 239, 1) 0%,
@@ -126,11 +133,11 @@ body {
             margin: 20px;
             width: 150px;
             height: 150px;
-
         }
     }
 
     .hero-header {
+        //this holds the name (title) and the class of the hero
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -143,6 +150,7 @@ body {
     }
 
     .hero-details {
+        //div with the abilities in text form
         padding: 20px 0px;
         display: flex;
         flex-flow: row wrap;
@@ -181,6 +189,7 @@ body {
     }
 
     .hero-abilities {
+        //div with abilities in picture form
         font-size: 15px;
         display: flex;
         flex-direction: column;
@@ -196,36 +205,10 @@ body {
         padding: 10px 10px;
         font-size: 17px;
     }
-
-    .btn-container {
-
-        .select-btn {
-            display: inline-block;
-            padding: 20px 32px;
-            border: 0;
-            text-decoration: none;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(30px);
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
-            letter-spacing: 2px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: 0.3s;
-            justify-content: center;
-            width: 13em;
-
-            &:hover {
-                background-color: rgba(228, 197, 255, 0.3);
-                transition: 0.3s;
-            }
-        }
-    }
 }
 
 .tooltip {
+    //class for the descprition of the abilities when you hover over with a mouse
     position: relative;
     display: inline-flex;
 
@@ -257,6 +240,7 @@ body {
     }
 
     &:hover {
+        //moves the ability img a bit higher
         transform: scale(1.2) translateY(-10px);
 
         .tooltiptext {
@@ -291,42 +275,8 @@ figure {
         font-style: italic;
     }
 }
-
-.btn-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    #start-fight {
-        display: none;
-
-        &:disabled,
-        &[disabled] {
-            cursor: not-allowed;
-            background-color: rgba(255, 255, 255, 0.2);
-
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.2);
-                transition: 0.3s;
-                box-shadow: none;
-
-            }
-        }
-    }
-
-    #battlelog {
-        display: none;
-    }
-
-    #restart {
-        display: none;
-    }
-}
-
-#select-sprite,
-#select-dragon,
-#select-dwarf {
-
+.select-btn {
+    //necessary so the user sees what they chose. Need to work on this a bit so it works on mobile better.
     &:focus {
         background-color: #4eff5d;
         color: #333;
@@ -336,6 +286,38 @@ figure {
         background-color: #4eff5d;
         color: #333;
     }
+}
+
+.btn-container {
+    //necessary for the start fight, battlelog and restart btns.
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#start-fight {
+    display: none;
+
+    &:disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            box-shadow: none;
+
+        }
+    }
+}
+
+#battlelog {
+    display: none;
+}
+
+#restart {
+    display: none;
 }
 
 /*IPAD*/
@@ -362,6 +344,7 @@ figure {
     // }
 }
 
+//classes that will change with js.
 .d-flex {
     display: flex;
 }

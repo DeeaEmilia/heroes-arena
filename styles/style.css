@@ -60,7 +60,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 2px;
   cursor: pointer;
   text-transform: uppercase;
@@ -77,7 +77,6 @@ body {
 .instructions {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
   padding: 2rem;
   margin: 2rem;
   color: #d3d3d3;
@@ -85,12 +84,11 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
-  color: rgba(255, 255, 255, 0.8);
 }
 .instructions h2 {
   margin: 1rem;
 }
-.instructions li {
+.instructions ol {
   line-height: 1.6;
 }
 
@@ -175,28 +173,6 @@ body {
   padding: 10px 10px;
   font-size: 17px;
 }
-.hero-container .btn-container .select-btn {
-  display: inline-block;
-  padding: 20px 32px;
-  border: 0;
-  text-decoration: none;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: 0.3s;
-  justify-content: center;
-  width: 13em;
-}
-.hero-container .btn-container .select-btn:hover {
-  background-color: rgba(228, 197, 255, 0.3);
-  transition: 0.3s;
-}
 
 .tooltip {
   position: relative;
@@ -254,41 +230,40 @@ figure figcaption {
   font-style: italic;
 }
 
+.select-btn:focus {
+  background-color: #4eff5d;
+  color: #333;
+}
+.select-btn:active {
+  background-color: #4eff5d;
+  color: #333;
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.btn-container #start-fight {
+
+#start-fight {
   display: none;
 }
-.btn-container #start-fight:disabled, .btn-container #start-fight[disabled] {
+#start-fight:disabled, #start-fight[disabled] {
   cursor: not-allowed;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.btn-container #start-fight:disabled:hover, .btn-container #start-fight[disabled]:hover {
+#start-fight:disabled:hover, #start-fight[disabled]:hover {
   background-color: rgba(255, 255, 255, 0.2);
   transition: 0.3s;
   box-shadow: none;
 }
-.btn-container #battlelog {
-  display: none;
-}
-.btn-container #restart {
+
+#battlelog {
   display: none;
 }
 
-#select-sprite:focus,
-#select-dragon:focus,
-#select-dwarf:focus {
-  background-color: #4eff5d;
-  color: #333;
-}
-#select-sprite:active,
-#select-dragon:active,
-#select-dwarf:active {
-  background-color: #4eff5d;
-  color: #333;
+#restart {
+  display: none;
 }
 
 /*IPAD*/
