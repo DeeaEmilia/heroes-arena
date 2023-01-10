@@ -48,6 +48,7 @@ function clearModalEscape(e) {
     //add the option to close it also by hitting escape
     if (e.key === 'Escape') {
         modal.style.display = 'none'
+        restart.style.display = "inherit";
       }
 }
 
