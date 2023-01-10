@@ -17,6 +17,7 @@ const modal = document.querySelector(".modal");
 const modalContainer = document.querySelector("#modal-container");
 
 
+
 function showHeroes() {
     //add the d-flex class to the heros div to make the heros visible
     heros.classList.add('d-flex');

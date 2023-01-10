@@ -168,7 +168,6 @@ function getComputerChoice(arr) {
     const item = filteredArray[randomIndex];
     //return that variable which is the Computer Choice
     return item;
-
 }
 
 //create a function that starts the fight. 
