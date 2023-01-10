@@ -124,12 +124,10 @@ class Fight {
     findWinner() {
         //search for a winner
         if (this.hero2.hp > 0) {
-            res += "<strong style='color:#61dd19; font-size:30px;'><br><br>" + this.hero2.name + " won with " + this.hero2.hp + " HP left. </strong>"
+            res += "<br><br><strong style='color:#61dd19; font-size:30px;'>You won!</strong><br><br>" + this.hero2.name + " remaining HP: " + this.hero2.hp + " HP left. "
         } else if (this.hero1.hp > 0) {
-            res += "<strong style='color:#61dd19;font-size:30px;'><br><br>" + this.hero1.name + " won with " + this.hero1.hp + " HP left.  </strong>"
-        } else {
-            res += "<strong style='color:#f29b9b;'><br><br> No heroes left alive! </strong>";
-        }
+            res += "<br><br><strong style='color:#e72f2f; font-size:30px;'>You lost!</strong><br><br>" + this.hero1.name + " remainng HP: " + this.hero1.hp + " HP left.  "
+        } 
     }
 
     go() {
@@ -173,7 +171,7 @@ function getComputerChoice(arr) {
 //create a function that starts the fight. 
 function startFightNow() {
     //declare a new object for the class Fight
-    let epicFight = new Fight(getComputerChoice(array), playerChoice);
+    let epicFight = new Fight(playerChoice, getComputerChoice(array));
     //call the method go from the class Fight
     epicFight.go();
     //make the modal for the battlelog visible
@@ -192,3 +190,4 @@ startFight.addEventListener('click', startFightNow);
 
 //for other functionalities, check functionality.js file
 
+//afisez selectionul intr-un modal -> inlocuit cu you
