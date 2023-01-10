@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   src: url(../assets/Raleway-Regular.woff2);
 }
 * {
