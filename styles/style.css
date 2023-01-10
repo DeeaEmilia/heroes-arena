@@ -28,27 +28,6 @@ hr {
   border: 0;
 }
 
-body {
-  background-image: url(../assets/sky.webp);
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: #0e0c55;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.main-container .title {
-  color: #ffffff;
-  font-size: 75px;
-  text-align: center;
-  margin: 6vh 3vw;
-}
-
 .btn {
   display: inline-block;
   padding: 20px 32px;
@@ -74,22 +53,82 @@ body {
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #f4ebdc, 0 0 30px #f4ebdc;
 }
 
+.select-btn:focus {
+  background-color: #4eff5d;
+  color: #333;
+}
+.select-btn:active {
+  background-color: #4eff5d;
+  color: #333;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#start-fight {
+  display: none;
+}
+#start-fight:disabled, #start-fight[disabled] {
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#start-fight:disabled:hover, #start-fight[disabled]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+  box-shadow: none;
+}
+
+#battlelog {
+  display: none;
+}
+
+#restart {
+  display: none;
+}
+
+body {
+  background-image: url(../assets/sky.webp);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #0e0c55;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .title {
+  color: #ffffff;
+  font-size: 75px;
+  text-align: center;
+  margin: 6vh 3vw;
+}
+
 .instructions {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
   margin: 2rem;
   color: #d3d3d3;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
+  padding: 10px 12px;
 }
-.instructions h2 {
+.instructions summary {
   margin: 1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 .instructions ol {
   line-height: 1.6;
+  margin: 2rem;
 }
 
 .heroes-container {
@@ -240,42 +279,6 @@ figure {
 figure figcaption {
   font-size: 0.75em;
   font-style: italic;
-}
-
-.select-btn:focus {
-  background-color: #4eff5d;
-  color: #333;
-}
-.select-btn:active {
-  background-color: #4eff5d;
-  color: #333;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#start-fight {
-  display: none;
-}
-#start-fight:disabled, #start-fight[disabled] {
-  cursor: not-allowed;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-#start-fight:disabled:hover, #start-fight[disabled]:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: 0.3s;
-  box-shadow: none;
-}
-
-#battlelog {
-  display: none;
-}
-
-#restart {
-  display: none;
 }
 
 /*IPAD*/
