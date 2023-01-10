@@ -74,7 +74,7 @@ class Sprite extends Hero {
     attack(otherHero) {
         let damage = 100;
         let chance = Math.random();
-        if (chance > 0.6) {
+        if (chance > 0.7) {
             damage += 100;
             res += "The attack triggered <strong>[" + this.name + "] </strong> skill <strong>[Sass] </strong> for extra 50 damage. ";
         }
@@ -108,10 +108,10 @@ class Fight {
     performAttack() {
         //use %2 === 0 or not to count the turns. if the turn is even then Computer is attacking, if it's odd then You are attacking
         if (this.turn % 2 === 0) {
-            res += "Turn " + this.turn + " <strong style='color:#e72f2f;'>Computer: </strong><strong style='color:#e72f2f;'>";
+            res += "◦⊳ Turn " + this.turn + " ⊲◦ <strong style='color:#e72f2f;'>Computer: </strong><strong style='color:#e72f2f;'>";
             this.hero1.attack(this.hero2);
         } else {
-            res += "Turn " + this.turn + " <strong style='color:#61dd19;'>You: </strong><strong style='color:#61dd19;'>";
+            res += "◦⊳ Turn " + this.turn + " ⊲◦ <strong style='color:#61dd19;'>You: </strong><strong style='color:#61dd19;'>";
             this.hero2.attack(this.hero1);
         }
     }
