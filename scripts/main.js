@@ -180,7 +180,7 @@ function startFightNow() {
     startFight.disabled = true;
 }
 
-//add event listeners one for the start fight button and 3 for the player choice.
+//add event listeners, 1 for the start fight button and 3 for the player choice.
 //in player choice, first choose the id of the btn, then add the event listener, click and then call the function with the corresponding variable for the chosen hero, as you see below:
 selectSprite.addEventListener('click', function(){getPlayerChoice(sprite);});
 selectDragon.addEventListener('click', function(){getPlayerChoice(dragon);});

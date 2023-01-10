@@ -11,7 +11,7 @@ const restart = document.querySelector("#restart");
 const start = document.querySelector("#start");
 //self explanatory
 const startFightBtn = document.querySelector("#start-fight");
-//this is the div that holds the battlelog and the rest of the screen blurry and darker
+//this is the div that holds the battlelog and makes the rest of the screen blurry and darker
 const modal = document.querySelector(".modal");
 //this will generate the text for the battelog from the variable res from main.js
 const modalContainer = document.querySelector("#modal-container");
