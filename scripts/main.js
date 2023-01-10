@@ -38,13 +38,13 @@ class Hero {
         if (this.heal) {
             let chance = Math.random();
             if (chance > 0.7) {
-                damage *= 0.9;
-                res += this.name + "healed for 10%. "
+                this.hp += 20;
+                res += this.name + "healed for 10% of his initial health. "
             }
         }
 
         this.hp -= damage;
-        res += this.name + " lost " + damage + " HP.<br>" + this.name + " HP remaining: " + this.hp + ". <br> ";
+        res += this.name + " got attacked with a total of " + damage + " damage.<br>" + this.name + " HP remaining: " + this.hp + ". <br> ";
     }
 }
 

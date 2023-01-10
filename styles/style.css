@@ -97,7 +97,7 @@ body {
   justify-content: space-evenly;
   color: #d3d3d3;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-container {
@@ -172,6 +172,18 @@ body {
 .hero-container .hero-class {
   padding: 10px 10px;
   font-size: 17px;
+}
+.hero-container .hero-class summary {
+  margin-bottom: 5px;
+}
+.hero-container .hero-class summary:hover {
+  cursor: pointer;
+}
+.hero-container .hero-class p {
+  margin-top: 2px;
+  line-height: 1.5;
+  font-size: 12px;
+  max-width: 200px;
 }
 
 .tooltip {

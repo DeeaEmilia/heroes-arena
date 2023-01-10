@@ -83,7 +83,7 @@ body {
     color: #d3d3d3;
     //row wrap will send one or two of the three heros a row below, depending on the screen size. Again, grid might be better here but tbd.
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .hero-container {
@@ -204,6 +204,21 @@ body {
     .hero-class {
         padding: 10px 10px;
         font-size: 17px;
+
+        summary {
+            margin-bottom: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        p {
+            margin-top: 2px;
+            line-height: 1.5;
+            font-size: 12px;
+            max-width: 200px;
+        }
     }
 }
 
