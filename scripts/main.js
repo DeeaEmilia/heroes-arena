@@ -148,9 +148,8 @@ let sprite = new Sprite("Sylveon ", 1000);
 let dragon = new Dragon("Dragonair ", 2100);
 //create an array for the computer's choice
 const array = [dwarf, sprite, dragon];
-//create 2 variables to store the player's choice and the computer's choice
+//create 2 variables to store the player's choice
 let playerChoice;
-let computerChoice;
 
 //create a function for the player's choice. The variable playerChoice will be called with an Event Listener below
 function getPlayerChoice(selection) {
@@ -161,9 +160,15 @@ function getPlayerChoice(selection) {
 
 //create a function that chooses a random index out of an array
 function getComputerChoice(arr) {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    const item = arr[randomIndex];
+    //add filteredArray var to delete the playerChoice from the array. Ty stack overflow and Zen
+    let filteredArray = arr.filter(e => e !== playerChoice)
+    //add variable randomIndex then add math.floor method and math.random times the amount of the heros in the array to get a random index (in this case 0 or 1)
+    const randomIndex = Math.floor(Math.random() * filteredArray.length);
+    //add variable item to equal the value corresponding to the index chosen above
+    const item = filteredArray[randomIndex];
+    //return that variable which is the Computer Choice
     return item;
+
 }
 
 //create a function that starts the fight. 
