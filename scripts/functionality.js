@@ -43,6 +43,13 @@ function clearModal(e) {
     }
 }
 
+function clearModalEscape(e) {
+    //add the option to close it also by hitting escape
+    if (e.key === 'Escape') {
+        modal.style.display = 'none'
+      }
+}
+
 //this just refreshes the page
 function restartGame() {
     location.reload();
@@ -53,3 +60,4 @@ start.addEventListener('click', showHeroes);
 battlelog.addEventListener('click', roundResults);
 window.addEventListener('click', clearModal);
 restart.addEventListener('click', restartGame);
+window.addEventListener('keydown', clearModalEscape);
