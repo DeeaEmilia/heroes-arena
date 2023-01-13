@@ -39,7 +39,7 @@ class Hero {
             let chance = Math.random();
             if (chance > 0.7) {
                 this.hp += 20;
-                res += this.name + "healed for 10% of his initial health. "
+                res += this.name + "healed 20 HP. "
             }
         }
 
@@ -146,7 +146,7 @@ let sprite = new Sprite("Sylveon ", 1000);
 let dragon = new Dragon("Dragonair ", 2100);
 //create an array for the computer's choice
 const array = [dwarf, sprite, dragon];
-//create 2 variables to store the player's choice
+//create a variable to store the player's choice
 let playerChoice;
 
 //create a function for the player's choice. The variable playerChoice will be called with an Event Listener below
