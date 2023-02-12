@@ -122,12 +122,22 @@ class Fight {
     }
 
     findWinner() {
+        let winner;
         //search for a winner
         if (this.hero2.hp > 0) {
+            winner = "You";
             res += "<br><br><strong style='color:#61dd19; font-size:30px;'>You won!</strong><br><br>" + this.hero2.name + " remaining HP: " + this.hero2.hp + " HP left. "
         } else if (this.hero1.hp > 0) {
+            winner = "Computer";
             res += "<br><br><strong style='color:#e72f2f; font-size:30px;'>You lost!</strong><br><br>" + this.hero1.name + " remainng HP: " + this.hero1.hp + " HP left.  "
-        } 
+        }
+        const modalContainer = document.querySelector("#modal-container");
+        modalContainer.innerHTML = `
+        <h2>${winner} won!</h2>
+        <p>For a more in-depth analysis of the battle, check the battlelog.</p>
+    `;
+        const modal = document.querySelector(".modal");
+        modal.style.display = "block";
     }
 
     go() {
@@ -182,9 +192,9 @@ function startFightNow() {
 
 //add event listeners, 1 for the start fight button and 3 for the player choice.
 //in player choice, first choose the id of the btn, then add the event listener, click and then call the function with the corresponding variable for the chosen hero, as you see below:
-selectSprite.addEventListener('click', function(){getPlayerChoice(sprite);});
-selectDragon.addEventListener('click', function(){getPlayerChoice(dragon);});
-selectDwarf.addEventListener('click', function(){getPlayerChoice(dwarf);});
+selectSprite.addEventListener('click', function () { getPlayerChoice(sprite); });
+selectDragon.addEventListener('click', function () { getPlayerChoice(dragon); });
+selectDwarf.addEventListener('click', function () { getPlayerChoice(dwarf); });
 //for start fight, you only need to add the startFightNow function without any arguments.
 startFight.addEventListener('click', startFightNow);
 

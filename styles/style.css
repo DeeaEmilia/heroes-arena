@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   src: url(../assets/Raleway-Regular.woff2);
 }
 * {
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
 }
 
 ul {
@@ -298,4 +298,12 @@ figure figcaption {
 
 .d-inherit {
   display: inherit;
+}
+
+.winner {
+  box-shadow: 0px 0px 10px 10px green;
+}
+
+.loser {
+  box-shadow: 0px 0px 10px 10px red;
 }/*# sourceMappingURL=style.css.map */

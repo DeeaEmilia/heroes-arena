@@ -306,3 +306,11 @@ figure {
 .d-inherit {
     display: inherit;
 }
+
+.winner {
+    box-shadow: 0px 0px 10px 10px green;
+  }
+  
+  .loser {
+    box-shadow: 0px 0px 10px 10px red;
+  }

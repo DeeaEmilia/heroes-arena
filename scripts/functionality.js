@@ -54,6 +54,7 @@ function clearModalEscape(e) {
 
 //this just refreshes the page
 function restartGame() {
+    modal.style.display = 'none';
     location.reload();
 }
 
