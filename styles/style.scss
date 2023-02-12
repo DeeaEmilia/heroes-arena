@@ -27,30 +27,6 @@ body {
     }
 }
 
-.instructions {
-    //most of this is self-explanatory
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-    color: #d3d3d3;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(30px);
-    padding: 10px 12px;
-    
-    summary {
-        margin: 1rem;
-        letter-spacing: 2px;
-        font-weight: bold;
-    }
-    ol {
-        //leaves some space between the rows of the list
-        line-height: 1.6;
-        margin: 2rem;
-    }
-}
-
 .heroes-container {
     //gets the display none which will be changed with js
     display: none;

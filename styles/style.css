@@ -110,27 +110,6 @@ body {
   margin: 6vh 3vw;
 }
 
-.instructions {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
-  color: #d3d3d3;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
-  padding: 10px 12px;
-}
-.instructions summary {
-  margin: 1rem;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-.instructions ol {
-  line-height: 1.6;
-  margin: 2rem;
-}
-
 .heroes-container {
   display: none;
   justify-content: space-evenly;
