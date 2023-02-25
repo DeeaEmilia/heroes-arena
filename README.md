@@ -9,7 +9,7 @@
 <p> During the battle, players can watch the action in the background and receive updates in the battlelog. The game is designed to be simple and easy to understand, but still provides a fun and engaging experience for all players. </p>
 
 ## Live Preview
-You can play the game by visiting https://deeaemilia.github.io/heroes-minigame/
+You can play the game by visiting https://deeaemilia.github.io/heroes-arena/
 
 ## OOP Details
 This project was developed as a study project for Object-Oriented Programming (OOP) in JavaScript. The code makes use of classes, inheritance, and other key features of OOP in JavaScript to manage the game mechanics and logic. This includes:
