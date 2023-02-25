@@ -2,6 +2,8 @@
 
 <p> Heroes Arena is a web-based minigame where players can choose a hero and battle against a computer-controlled opponent. The game is built using HTML, CSS, and JavaScript, and makes use of Object-Oriented Programming (OOP) principles to manage the game logic and mechanics. </p>
 
+## About the game
+
 <p> In Heroes Arena, players choose one of three available heroes: Smoliv, Sylveon, or Dragonair. Each hero has its own set of skills, which can be used during the battle to gain advantages over the opponent. The computer-controlled opponent will randomly choose one of the remaining heroes, so players must choose their hero carefully. </p>
 
 <p> The hero skills include the ability to dodge attacks, defend against damage, deal extra damage, or heal themselves. Some skills are RNG-based, so players will need to use strategy and luck to win battles. </p>
