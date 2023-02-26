@@ -43,7 +43,5 @@ This project was developed as a study project for Object-Oriented Programming (O
 ## License
 This project is licensed under the MIT License. See the LICENSE.md file for details.
 
-## Contact
-If you have any questions or comments about the project, please feel free to contact us at your-email@example.com.
 
 
