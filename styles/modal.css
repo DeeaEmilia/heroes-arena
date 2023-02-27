@@ -17,6 +17,7 @@
   color: #f8f6f3;
   line-height: 1.6;
   margin: 10% auto;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 10px;
   padding: 3rem;

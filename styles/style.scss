@@ -150,26 +150,6 @@ body {
             font-size: 20px;
         }
     }
-
-    .hero-class {
-        padding: 10px 10px;
-        font-size: 17px;
-
-        summary {
-            margin-bottom: 5px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        p {
-            margin-top: 2px;
-            line-height: 1.5;
-            font-size: 12px;
-            max-width: 200px;
-        }
-    }
 }
 
 .tooltip {
@@ -239,31 +219,6 @@ figure {
         font-size: 0.75em;
         font-style: italic;
     }
-}
-
-
-/*IPAD*/
-@media only screen and (max-width: 1024px) {
-    // body {
-    //     background-image: none;
-    //     background-color: red;
-    // }
-}
-
-/*MOBILE*/
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-    // body {
-    //     background-image: none;
-    //     background-color: blue;
-    // }
-}
-
-/*MOBILE*/
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    // body {
-    //     background-image: none;
-    //     background-color: pink;
-    // }
 }
 
 //classes that will change with js.

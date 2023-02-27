@@ -37,7 +37,8 @@ hr {
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
   color: rgba(255, 255, 255, 0.8);
   font-size: 15px;
   letter-spacing: 2px;
@@ -187,22 +188,6 @@ body {
   margin: 10px 0;
   font-size: 20px;
 }
-.hero-container .hero-class {
-  padding: 10px 10px;
-  font-size: 17px;
-}
-.hero-container .hero-class summary {
-  margin-bottom: 5px;
-}
-.hero-container .hero-class summary:hover {
-  cursor: pointer;
-}
-.hero-container .hero-class p {
-  margin-top: 2px;
-  line-height: 1.5;
-  font-size: 12px;
-  max-width: 200px;
-}
 
 .tooltip {
   position: relative;
@@ -260,9 +245,6 @@ figure figcaption {
   font-style: italic;
 }
 
-/*IPAD*/
-/*MOBILE*/
-/*MOBILE*/
 .d-flex {
   display: flex;
 }
