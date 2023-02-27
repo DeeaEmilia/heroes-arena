@@ -4,11 +4,7 @@
 
 ## About the game
 
-<p> In Heroes Arena, players choose one of three available heroes: Smoliv, Sylveon, or Dragonair. Each hero has its own set of skills, which can be used during the battle to gain advantages over the opponent. The computer-controlled opponent will randomly choose one of the remaining heroes, so players must choose their hero carefully. </p>
-
-<p> The hero skills include the ability to dodge attacks, defend against damage, deal extra damage, or heal themselves. Some skills are RNG-based, so players will need to use strategy and luck to win battles. </p>
-
-<p> During the battle, players can watch the action in the background and receive updates in the battlelog. The game is designed to be simple and easy to understand, but still provides a fun and engaging experience for all players. </p>
+<p> In Heroes Arena, players choose one of three available heroes: Smoliv, Sylveon, or Dragonair. Each hero has its own set of skills, which will automatically be used during the battle against the opponent. The computer-controlled opponent will randomly choose one of the remaining heroes, so players must choose their hero carefully. </p>
 
 ## Live Preview
 You can play the game by visiting https://deeaemilia.github.io/heroes-arena/
