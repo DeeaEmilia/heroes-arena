@@ -36,7 +36,7 @@ This project was developed as a study project for Object-Oriented Programming (O
 <li> The computer-controlled opponent will randomly choose one of the remaining heroes. </li>
 <li> Players must use their hero's skills to defeat the opponent and win the battle. </li>
 <li> Skills include dodge, defend, extra damage, and heal. </li>
-<li> Some skills are RNG-based, so players will need to use strategy and luck to win. </li>
+<li> Some skills are RNG-based, so players will need to to be careful at the skill description and also rely on luck to win. </li>
 <li> The battle happens in the background, and players can receive updates in the battlelog. </li>
 </ul>
 
